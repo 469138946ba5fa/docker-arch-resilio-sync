@@ -20,7 +20,7 @@ services:
       options:
         max-size: ${LOG_MAX_SIZE}
     volumes:                                      # 挂载路径，来自 .env
-      - ${NOTEBOOK_PATH}
+      - ${RESILIO_SYNC_PATH}
     networks:
       - network
 
