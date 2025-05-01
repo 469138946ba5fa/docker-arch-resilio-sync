@@ -104,8 +104,8 @@ docker rm -fv resilio_sync_container
 
 
 ### 测试
-在 Resilio Sync 中，新建 key 链接，可以在网上寻找众人分享的 Resilio Sync keys 进行测试
-比如当前有人推荐我看的 《PSYCHO-PASS》，一直没机会看，看看他人分享同步的吧
+在 Resilio Sync 中，新建 key 链接，可以在网上寻找众人分享的 Resilio Sync keys 进行测试  
+比如有人推荐我看的 《PSYCHO-PASS》，一直没机会看，看看他人分享同步的吧
 ![6](images/6.png)
 
 ## 已知问题与调试
