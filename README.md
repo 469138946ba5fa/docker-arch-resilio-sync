@@ -16,12 +16,13 @@
 
 项目工作目录如下：
 
-```
+```plaintext
 .
 ├── .env.amd64                   # Docker Compose 配置文件所需 amd64 环境，需要更名为 .env 使用
 ├── .env.arm64                   # Docker Compose 配置文件所需 arm64 环境，需要更名为 .env 使用
 ├── docker-compose.yml           # Docker Compose 配置文件，用于多容器编排（例如搭配其它服务时使用）
 ├── Dockerfile                   # 构建 Docker 镜像的说明文件
+├── images                       # 图片文件，用于说明引用
 ├── LICENSE                      # 许可协议文件
 ├── README.md                    # 本项目说明文档
 ├── scripts                      # 脚本目录，包含各项自动化安装和启动脚本 

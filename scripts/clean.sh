@@ -5,9 +5,6 @@ source "$(dirname "$0")/common.sh"
 
 log_info "Starting clean of System..."
 
-# Miniforge 安装路径
-# export MINIFORGE_DIR=/opt/Miniforge
-
 # 清理 APT 缓存
 clean_apt() {
   log_info "清理 init_system.sh 所产生的 APT 缓存..."
