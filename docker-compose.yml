@@ -1,0 +1,29 @@
+services:
+  resilio_sync_service:
+    build:
+      context: ${BUILD_CONTEXT}                   # 构建上下文路径，来自 .env
+    entrypoint:                                   # ENTRYPOINT 配置，来自 .env
+      - "${ENTRYPOINT}"
+      - "${ENTRYPOINT_ARG}"
+    command:                                      # CMD 脚本路径，来自 .env
+      - "${CMD_SCRIPT}"
+      - "${CMD_ARGS_1}"
+      - "${CMD_ARGS_2}"
+    image: ${IMAGE_NAME}                          # 镜像名称，来自 .env
+    platform: ${PLATFORM}                         # 平台架构，来自 .env
+    container_name: ${CONTAINER_NAME}             # 容器名称，来自 .env
+    ports:
+      - ${RESILIO_SYNC_PORT}                      # 端口映射，来自 .env
+    restart: ${CONTAINER_RESTART_POLICY}          # 重启策略，来自 .env
+    logging:                                      # 日志配置，来自 .env
+      driver: ${LOGGING_DRIVER}
+      options:
+        max-size: ${LOG_MAX_SIZE}
+    volumes:                                      # 挂载路径，来自 .env
+      - ${RESILIO_SYNC_PATH}
+    networks:
+      - network
+
+networks:
+  network:
+    driver: ${NETWORK_TYPE}                       # 网络配置，来自 .env
